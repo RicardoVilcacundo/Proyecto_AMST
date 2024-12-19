@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.proyectoasmt.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/Recomendaciones"
+        android:name="com.example.proyectoasmt.ui.dashboard.DashboardFragment"
+        android:label="Menu_recomendaciones"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_Recomendaciones_to_recomendaciones"
+            app:destination="@id/recomendaciones" />
+        <action
+            android:id="@+id/action_Recomendaciones_to_ayuda_inmediata"
+            app:destination="@id/ayuda_inmediata" />
+        <action
+            android:id="@+id/action_Recomendaciones_to_conocete_ati_misma2"
+            app:destination="@id/conocete_ati_misma" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Estadisticas"
+        android:name="com.example.proyectoasmt.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/Menu_usuario"
+        android:name="com.example.proyectoasmt.Menu_Estadisticas"
+        android:label="fragment_menu__estadisticas"
+        tools:layout="@layout/fragment_menu__estadisticas" />
+    <fragment
+        android:id="@+id/conocete_ati_misma"
+        android:name="com.example.proyectoasmt.conocete_ati_misma"
+        android:label="fragment_conocete_ati_misma"
+        tools:layout="@layout/fragment_conocete_ati_misma" >
+        <action
+            android:id="@+id/action_conocete_ati_misma_to_Recomendaciones"
+            app:destination="@id/Recomendaciones" />
+    </fragment>
+    <fragment
+        android:id="@+id/recomendaciones"
+        android:name="com.example.proyectoasmt.recomendaciones"
+        android:label="fragment_recomendaciones"
+        tools:layout="@layout/fragment_recomendaciones" >
+        <action
+            android:id="@+id/action_recomendaciones_to_Recomendaciones2"
+            app:destination="@id/Recomendaciones" />
+    </fragment>
+    <fragment
+        android:id="@+id/ayuda_inmediata"
+        android:name="com.example.proyectoasmt.ayuda_inmediata"
+        android:label="fragment_ayuda_inmediata"
+        tools:layout="@layout/fragment_ayuda_inmediata" >
+        <action
+            android:id="@+id/action_ayuda_inmediata_to_Recomendaciones"
+            app:destination="@id/Recomendaciones" />
+    </fragment>
+</navigation>
