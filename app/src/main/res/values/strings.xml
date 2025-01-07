@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name" translatable="false">ProyectoASMT</string>
-    <string name="title_home" translatable="false">Menu_Home</string>
-    <string name="title_dashboard" translatable="false">Menu_recomendaciones</string>
-    <string name="title_notifications" translatable="false">Menu_estadistica</string>
+    <string name="app_name">Proyecto</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_usuario">Usuario</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_button">Añadir</string>
+
 </resources>

@@ -7,6 +7,7 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        maven ("https://jitpack.io")
         mavenCentral()
         gradlePluginPortal()
     }
@@ -16,9 +17,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven ("https://jitpack.io")
     }
 }
 
-rootProject.name = "ProyectoASMT"
+rootProject.name = "Proyecto"
 include(":app")
- 
