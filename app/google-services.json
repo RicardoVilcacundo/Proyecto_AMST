@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "170271768095",
+    "project_id": "amst-proyecto-b47c9",
+    "storage_bucket": "amst-proyecto-b47c9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170271768095:android:0306c9529bedcecabc5f2a",
+        "android_client_info": {
+          "package_name": "com.example.proyecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKDbZ-7BMN7Im4sfOReHrhb-0_a6n_yyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
