@@ -7,5 +7,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_button">Añadir</string>
+    <string name="default_web_client_id">170271768095-af708h6mtdq889ubeq719gg4s2uidua7.apps.googleusercontent.com</string>
+
 
 </resources>
