@@ -32,9 +32,18 @@ class DashboardFragment : Fragment() {
         val root: View = binding.root
 
         // Configura el evento de clic del botón
-        binding.buttonPruebaa.setOnClickListener {
+        binding.cardView1.setOnClickListener {
             // Usamos NavController para navegar a EncuestaFragment
             findNavController().navigate(R.id.action_navigation_dashboard_to_navigation_encuesta)
+        }
+
+        binding.cardView2.setOnClickListener {
+            // Usamos NavController para navegar a EncuestaFragment
+            findNavController().navigate(R.id.action_navigation_dashboard_to_recomendacionesFragment)
+        }
+        binding.cardView3.setOnClickListener {
+            // Usamos NavController para navegar a EncuestaFragment
+            findNavController().navigate(R.id.action_navigation_dashboard_to_ayudaFragment)
         }
 
         return root

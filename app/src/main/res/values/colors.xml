@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="purple_100">#AEEAD7FA</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -10,6 +11,15 @@
     <color name="primario">#364F82</color>
     <color name="relleno">#FAFAFA</color>
     <color name="regiter">#BA3C0FDF</color>
+    <color name="tarjeta">#D9D9D9</color>
+    <color name="soft_blue">#E3F2FD</color>
+    <color name="gray">#6D6D6F</color>
+    <color name="dark_blue">#072171</color>
+
+
+
+
+
 
 
 

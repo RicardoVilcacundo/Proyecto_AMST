@@ -4,170 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment"
-    android:background="@color/primario">
+    tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/txt_titulo"
-        android:layout_width="348dp"
-        android:layout_height="44dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Bienestar emocional"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!-- Contenedor general -->
+    <LinearLayout
+        android:id="@+id/contenedorGeneral"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="183dp"
-        android:layout_height="183dp"
-        android:layout_margin="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="2dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351">
-
-        <!-- Contenido centrado -->
-        <LinearLayout
+        <!-- Tarjeta 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp"> <!-- Esto centra el contenido -->
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/tarjeta">
 
-            <ImageView
-                android:id="@+id/imagenTarjeta"
-                android:layout_width="116dp"
-                android:layout_height="103dp"
-                android:contentDescription="Imagen de la tarjeta"
-                android:scaleType="centerCrop"
-                android:src="@drawable/corazon" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-            <TextView
-                android:id="@+id/tituloTarjeta"
-                android:layout_width="178dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:text="Conocete a ti misma"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/iconoTarjeta1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Icono tarjeta 1"
+                    android:src="@drawable/corazon"/>
 
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/tituloTarjeta1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Conócete a ti misma"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="183dp"
-        android:layout_height="183dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="2dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342">
+                    <TextView
+                        android:id="@+id/descripcionTarjeta1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Explora tu bienestar y conoce las claves para una vida saludable."
+                        android:textSize="14sp" />
+                </LinearLayout>
 
-        <!-- Contenido centrado -->
-        <LinearLayout
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp"> <!-- Esto centra el contenido -->
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/tarjeta">
 
-            <ImageView
-                android:id="@+id/imagenTarjeta2"
-                android:layout_width="116dp"
-                android:layout_height="103dp"
-                android:contentDescription="Imagen de la tarjeta"
-                android:scaleType="centerCrop"
-                android:src="@drawable/medalla" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-            <TextView
-                android:id="@+id/tituloTarjeta2"
-                android:layout_width="178dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:text="Recomendaciones"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/iconoTarjeta2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Icono tarjeta 2"
+                    android:src="@drawable/medalla"/>
 
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/tituloTarjeta2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recomendaciones"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="183dp"
-        android:layout_height="183dp"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.0">
+                    <TextView
+                        android:id="@+id/descripcionTarjeta2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Recibe consejos personalizados para mejorar tu bienestar."
+                        android:textSize="14sp" />
+                </LinearLayout>
 
-        <!-- Contenido centrado -->
-        <LinearLayout
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta 3 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp"> <!-- Esto centra el contenido -->
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/tarjeta">
 
-            <ImageView
-                android:id="@+id/imagenTarjeta3"
-                android:layout_width="116dp"
-                android:layout_height="103dp"
-                android:contentDescription="Imagen de la tarjeta"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ojos" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-            <TextView
-                android:id="@+id/tituloTarjeta3"
-                android:layout_width="178dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:text="Ayuda inmediata"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/iconoTarjeta3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Icono tarjeta 3"
+                    android:src="@drawable/ojos"/>
 
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/tituloTarjeta3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ayuda"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/buttonPruebaa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="301dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardView2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+                    <TextView
+                        android:id="@+id/descripcionTarjeta3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Encuentra recursos y apoyo en momentos de necesidad."
+                        android:textSize="14sp" />
+                </LinearLayout>
 
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

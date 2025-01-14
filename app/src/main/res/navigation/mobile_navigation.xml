@@ -19,6 +19,12 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_navigation_encuesta"
             app:destination="@id/navigation_encuesta" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_recomendacionesFragment"
+            app:destination="@id/recomendacionesFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_ayudaFragment"
+            app:destination="@id/ayudaFragment" />
     </fragment>
 
     <fragment
@@ -37,6 +43,24 @@
         android:label="ConoceteFragment" >
         <action
             android:id="@+id/action_navigation_encuesta_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/recomendacionesFragment"
+        android:name="com.example.proyecto.ui.conocete.RecomendacionesFragment"
+        android:label="fragment_recomendaciones"
+        tools:layout="@layout/fragment_recomendaciones" >
+        <action
+            android:id="@+id/action_recomendacionesFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/ayudaFragment"
+        android:name="com.example.proyecto.ui.conocete.ayudaFragment"
+        android:label="fragment_ayuda"
+        tools:layout="@layout/fragment_ayuda" >
+        <action
+            android:id="@+id/action_ayudaFragment_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
     </fragment>
 </navigation>

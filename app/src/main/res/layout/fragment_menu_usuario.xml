@@ -4,108 +4,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.usuario.Menu_usuario"
-    android:background="@color/primario">
+    tools:context=".ui.usuario.Menu_usuario">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/txt_titulo"
-        android:layout_width="348dp"
-        android:layout_height="44dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Detalles de la cuenta"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123" />
+    <!-- Contenedor principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="46dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:gravity="center_horizontal"
+        android:weightSum="1">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewDetalles"
-        android:layout_width="370dp"
-        android:layout_height="230dp"
-        android:layout_margin="0dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="2dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382">
+        <!-- Avatar e Información del Usuario -->
+        <ImageView
+            android:id="@+id/avatarImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ojos"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de Usuario"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:gravity="center" />
+
+        <!-- Tarjeta de Información Personal -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewInfoPersonal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_marginBottom="30dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/tarjeta"
+            android:padding="8dp">
 
-            <!-- Avatar (Imagen de perfil o ícono) -->
-
-            <TextView
-                android:id="@+id/avatar"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Avatar"
-                android:textSize="18sp"
-                android:layout_marginTop="15dp"
-                android:textStyle="bold"
-                android:layout_marginBottom="25dp"
-                android:gravity="center" />
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-            <!-- Nombre de usuario -->
-            <TextView
-                android:id="@+id/usernameTextView"
-                android:layout_width="wrap_content"
+                <!-- Icono de mensaje -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/medalla"
+                    android:layout_marginEnd="8dp"/>
+
+                <!-- Título y Descripción -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Información Personal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_height="30sp"
+                        android:layout_width="200sp"/>
+
+                    <TextView
+                        android:text="Nombre de Usuario y correo registrado"
+                        android:textSize="14sp"
+                        android:layout_height="30sp"
+                        android:layout_width="match_parent"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Tarjeta de Seguridad -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSeguridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            android:backgroundTint="@color/tarjeta">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre de usuario"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="25dp"
-                android:gravity="center" />
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-            <!-- Correo -->
-            <TextView
-                android:id="@+id/emailTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Correo"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="25dp"
-                android:gravity="center" />
+                <!-- Icono de seguridad -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/corazon"
+                    android:layout_marginEnd="8dp"/>
 
-            <!-- Contraseña (Ocultada) -->
-            <TextView
-                android:id="@+id/passwordTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contraseña"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:gravity="center" />
+                <!-- Título y Descripción -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="Seguridad"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_height="30sp"
+                        android:layout_width="200sp"/>
 
-    <Button
-        android:id="@+id/btn_boton"
-        android:layout_width="370dp"
-        android:layout_height="60dp"
-        android:text="Cerrar sesión"
-        app:cornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewDetalles"
-        app:layout_constraintVertical_bias="0.148"
-        android:backgroundTint="#CC7575"/>
+                    <TextView
+                        android:text="Cambio de Contraseña"
+                        android:textSize="14sp"
+                        android:layout_height="25sp"
+                        android:layout_width="200sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-
+        <!-- Botón de Salir -->
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:layout_marginTop="92dp"
+            android:backgroundTint="@color/regiter"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

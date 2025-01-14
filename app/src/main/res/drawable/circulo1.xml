@@ -7,7 +7,7 @@
     android:useLevel="false">
 
 
-    <solid android:color="#4C5D80"
+    <solid android:color="@color/purple_100"
         android:alpha="0.2">
 
     </solid>
